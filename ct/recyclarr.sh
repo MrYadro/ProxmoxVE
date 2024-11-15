@@ -64,7 +64,7 @@ msg_ok "Stopped ${APP} LXC"
 msg_info "Updating ${APP} LXC"
 rm -rf /usr/local/bin/*
 wget -q $(curl -s https://api.github.com/repos/recyclarr/recyclarr/releases/latest | grep download | grep linux-musl-x64 | cut -d\" -f4)
-tar -C /usr/local/bin -xvf recyclarr*.tar.xz
+tar -C /usr/local/bin -xJf recyclarr*.tar.xz
 rm -rf recyclarr*.tar.xz
 msg_ok "Updated ${APP} LXC"
 
